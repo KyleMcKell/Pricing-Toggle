@@ -1,7 +1,9 @@
 import React from "react";
 import { Card } from "./Card";
 
-interface Props {}
+interface Props {
+	renewalLength: string;
+}
 
 export type PricingCard = {
 	model: string;
