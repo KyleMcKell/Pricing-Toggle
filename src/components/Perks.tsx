@@ -1,6 +1,10 @@
 import React from "react";
 
-interface Props {}
+interface Props {
+	storage: string;
+	usersAllowed: number;
+	sendGB: number;
+}
 
 export const Perks = (props: Props) => {
 	return (
