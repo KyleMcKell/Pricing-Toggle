@@ -5,12 +5,32 @@ interface Props {
 	setRenewalLength: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const ToggleSwitch = (props: Props) => {
+export const ToggleSwitch: React.FC<Props> = ({
+	renewalLength,
+	setRenewalLength,
+}) => {
+	const handleClick = () => {
+		switch (renewalLength) {
+			case "monthly":
+				setRenewalLength("yearly");
+				break;
+			case "yearly":
+				setRenewalLength("montly");
+				break;
+			default:
+				setRenewalLength("montly");
+				break;
+		}
+	};
+
 	return (
 		<div className="flex justify-between items-center m-6 font-semibold text-gray-600">
 			<h2>Annually</h2>
 			{/* switch container */}
-			<div className="w-16 h-8 flex items-center rounded-full p-1 bg-gradient-to-r from-purple-300 to-purple-500 mr-4 ml-4">
+			<div
+				className="w-16 h-8 flex items-center rounded-full p-1 bg-gradient-to-r from-purple-300 to-purple-500 mr-4 ml-4"
+				onClick={() => handleClick()}
+			>
 				{/* switch */}
 				<div className="bg-white w-6 h-6 rounded-full shadow-md"></div>
 			</div>
