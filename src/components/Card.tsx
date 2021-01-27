@@ -13,6 +13,7 @@ export type CardStyles = {
 	btnColor: string;
 	btnTxtColor: string;
 	height: string;
+	zIndex: string;
 };
 
 const baseCardStyles: CardStyles = {
@@ -21,6 +22,7 @@ const baseCardStyles: CardStyles = {
 	btnColor: "purple-400",
 	btnTxtColor: "white",
 	height: "11/12",
+	zIndex: "0",
 };
 
 const primaryCardStyles: CardStyles = {
@@ -29,6 +31,7 @@ const primaryCardStyles: CardStyles = {
 	btnColor: "white",
 	btnTxtColor: "gray-600",
 	height: "full",
+	zIndex: "10",
 };
 
 export const Card: React.FC<Props> = ({ card }) => {
@@ -42,7 +45,7 @@ export const Card: React.FC<Props> = ({ card }) => {
 
 	return (
 		<div
-			className={`bg-${style.bgColor} text-${style.txtColor} flex flex-col items-center justify-around h-${style.height} m-1 w-1/6 p-8 rounded-2xl shadow-2xl`}
+			className={`bg-${style.bgColor} text-${style.txtColor} z-${style.zIndex} h-${style.height} w-1/6 flex flex-col items-center justify-around -m-2  p-8 rounded-2xl shadow-2xl`}
 		>
 			<h4 className="font-semibold text-lg">{card.model}</h4>
 			<h3 className="font-bold text-7xl flex items-center">

@@ -7,7 +7,7 @@ interface Props {}
 
 const App = (props: Props) => {
 	return (
-		<div className="flex justify-center items-center h-screen w-screen flex-col bg-purple-100">
+		<div className="flex justify-center items-center h-screen w-screen flex-col bg-gradient-to-br from-purple-100 to-purple-300">
 			<Title />
 			<ToggleSwitch />
 			<Cards />
