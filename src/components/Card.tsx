@@ -18,7 +18,7 @@ const baseCardColors: CardColors = {
 	bgColor: "gray-50",
 	txtColor: "gray-600",
 	btnColor: "purple-400",
-	btnTxtColor: "gray-100",
+	btnTxtColor: "white",
 };
 
 const primaryCardColors: CardColors = {
