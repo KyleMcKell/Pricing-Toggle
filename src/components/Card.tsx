@@ -5,6 +5,7 @@ import { PricingCard } from "./Cards";
 
 interface Props {
 	card: PricingCard;
+	renewalLength: string;
 }
 
 export type CardStyles = {
@@ -34,14 +35,27 @@ const primaryCardStyles: CardStyles = {
 	zIndex: "10",
 };
 
-export const Card: React.FC<Props> = ({ card }) => {
+export const Card: React.FC<Props> = ({ card, renewalLength }) => {
 	const [style, setStyle] = useState(baseCardStyles);
+	const [price, setPrice] = useState(card.monthlyPrice);
 
 	useEffect(() => {
 		if (card.isPrimary) {
 			setStyle(primaryCardStyles);
 		}
 	}, []);
+
+	useEffect(() => {
+		switch (renewalLength) {
+			case "monthly":
+				setPrice(card.monthlyPrice);
+				break;
+			case "yearly":
+				const yearlyPrice = Math.floor((card.monthlyPrice - 5) * 12) + 0.99;
+				setPrice(yearlyPrice);
+				break;
+		}
+	}, [renewalLength]);
 
 	return (
 		<div
@@ -50,7 +64,7 @@ export const Card: React.FC<Props> = ({ card }) => {
 			<h4 className="font-semibold text-lg">{card.model}</h4>
 			<h3 className="font-bold text-7xl flex items-center">
 				<span className="text-4xl mr-1">$</span>
-				{`${card.monthlyPrice}`}
+				{`${price}`}
 			</h3>
 			<Perks
 				storage={card.storage}
