@@ -39,10 +39,13 @@ export const Card: React.FC<Props> = ({ card }) => {
 
 	return (
 		<div
-			className={`bg-${colors.bgColor} text-${colors.txtColor} flex flex-col items-center justify-around h-full p-8`}
+			className={`bg-${colors.bgColor} text-${colors.txtColor} flex flex-col items-center justify-around m-4 h-full w-1/6 p-8 rounded-lg shadow-2xl`}
 		>
 			<h4 className="font-semibold">{card.model}</h4>
-			<h3 className="font-bold text-5xl">{`$${card.monthlyPrice}`}</h3>
+			<h3 className="font-bold text-7xl flex items-center">
+				<span className="text-4xl mr-1">$</span>
+				{`${card.monthlyPrice}`}
+			</h3>
 			<Perks
 				storage={card.storage}
 				usersAllowed={card.usersAllowed}
