@@ -45,15 +45,15 @@ export const ToggleSwitch: React.FC<Props> = ({
 				<h2>Monthly</h2>
 				{/* switch container */}
 				<div
-					className="w-16 h-8 flex items-center rounded-full p-1 bg-gradient-to-r from-purple-300 to-purple-500 mr-4 ml-4"
+					className="w-16 h-8 flex items-center rounded-full select-none p-1 bg-gradient-to-r from-purple-300 to-purple-500 mr-4 ml-4"
 					onClick={() => handleClick()}
 				>
 					{/* switch */}
 					<div
-						className={`bg-white w-6 h-6 rounded-full shadow-md transition-transform transform ${switchPosition}`}
+						className={`bg-white w-6 h-6 rounded-full shadow-md select-none transition-transform transform ${switchPosition}`}
 					></div>
 				</div>
-				<h2>Annually</h2>
+				<h2>Yearly</h2>
 			</div>
 		</div>
 	);
