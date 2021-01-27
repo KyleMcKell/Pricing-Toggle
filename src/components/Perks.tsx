@@ -6,11 +6,14 @@ interface Props {
 	sendGB: number;
 }
 
-export const Perks = (props: Props) => {
+export const Perks: React.FC<Props> = ({ storage, usersAllowed, sendGB }) => {
 	return (
-		<div>
-			{/* put perks here */}
-			{/* another line */}
+		<div className="flex flex-col justify-center items-center font-semibold text-normal">
+			<h5>{`${storage} Storage`}</h5>
+			<hr />
+			<h5>{`${usersAllowed} Users Allowed`}</h5>
+			<hr />
+			<h5>{`Send up to ${sendGB} GB`}</h5>
 		</div>
 	);
 };

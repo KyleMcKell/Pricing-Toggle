@@ -8,7 +8,7 @@ interface Props {
 export const Button: React.FC<Props> = ({ colors }) => {
 	return (
 		<button
-			className={`bg-${colors.btnColor} text-${colors.btnTxtColor} w-full h-12 rounded-lg font-semibold shadow-md`}
+			className={`bg-${colors.btnColor} text-${colors.btnTxtColor} text-normal w-full h-12 rounded-lg font-semibold shadow-md`}
 		>
 			Learn More
 			{/* another line */}
