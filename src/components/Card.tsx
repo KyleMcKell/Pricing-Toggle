@@ -7,22 +7,33 @@ interface Props {
 	card: PricingCard;
 }
 
+export type CardColors = {
+	bgColor: string;
+	txtColor: string;
+	btnColor: string;
+	btnTxtColor: string;
+};
+
+const baseCardColors: CardColors = {
+	bgColor: "gray-50",
+	txtColor: "gray-600",
+	btnColor: "purple-400",
+	btnTxtColor: "gray-100",
+};
+
+const primaryCardColors: CardColors = {
+	bgColor: "purple-400",
+	txtColor: "gray-100",
+	btnColor: "gray-50",
+	btnTxtColor: "gray-600",
+};
+
 export const Card: React.FC<Props> = ({ card }) => {
-	const [colors, setColors] = useState({
-		bgColor: "gray-50",
-		txtColor: "gray-600",
-		btnColor: "purple-400",
-		btnTxtColor: "gray-100",
-	});
+	const [colors, setColors] = useState(baseCardColors);
 
 	useEffect(() => {
 		if (card.isPrimary) {
-			setColors({
-				bgColor: "purple-400",
-				txtColor: "gray-100",
-				btnColor: "gray-50",
-				btnTxtColor: "gray-600",
-			});
+			setColors(primaryCardColors);
 		}
 	}, []);
 
@@ -37,7 +48,7 @@ export const Card: React.FC<Props> = ({ card }) => {
 				usersAllowed={card.usersAllowed}
 				sendGB={card.sendGB}
 			/>
-			<Button />
+			<Button colors={colors} />
 		</div>
 	);
 };
