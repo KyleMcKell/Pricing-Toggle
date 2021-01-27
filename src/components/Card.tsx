@@ -50,6 +50,7 @@ export const Card: React.FC<Props> = ({ card }) => {
 				storage={card.storage}
 				usersAllowed={card.usersAllowed}
 				sendGB={card.sendGB}
+				colors={colors}
 			/>
 			<Button colors={colors} />
 		</div>
