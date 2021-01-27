@@ -15,7 +15,7 @@ export type CardStyles = {
 	height: string;
 };
 
-const baseCardColors: CardStyles = {
+const baseCardStyles: CardStyles = {
 	bgColor: "gray-50",
 	txtColor: "gray-600",
 	btnColor: "purple-400",
@@ -23,7 +23,7 @@ const baseCardColors: CardStyles = {
 	height: "11/12",
 };
 
-const primaryCardColors: CardStyles = {
+const primaryCardStyles: CardStyles = {
 	bgColor: "purple-400",
 	txtColor: "white",
 	btnColor: "white",
@@ -32,17 +32,17 @@ const primaryCardColors: CardStyles = {
 };
 
 export const Card: React.FC<Props> = ({ card }) => {
-	const [colors, setColors] = useState(baseCardColors);
+	const [style, setStyle] = useState(baseCardStyles);
 
 	useEffect(() => {
 		if (card.isPrimary) {
-			setColors(primaryCardColors);
+			setStyle(primaryCardStyles);
 		}
 	}, []);
 
 	return (
 		<div
-			className={`bg-${colors.bgColor} text-${colors.txtColor} flex flex-col items-center justify-around h-${colors.height} m-1 w-1/6 p-8 rounded-2xl shadow-2xl`}
+			className={`bg-${style.bgColor} text-${style.txtColor} flex flex-col items-center justify-around h-${style.height} m-1 w-1/6 p-8 rounded-2xl shadow-2xl`}
 		>
 			<h4 className="font-semibold text-lg">{card.model}</h4>
 			<h3 className="font-bold text-7xl flex items-center">
@@ -53,9 +53,9 @@ export const Card: React.FC<Props> = ({ card }) => {
 				storage={card.storage}
 				usersAllowed={card.usersAllowed}
 				sendGB={card.sendGB}
-				colors={colors}
+				colors={style}
 			/>
-			<Button colors={colors} />
+			<Button colors={style} />
 		</div>
 	);
 };
