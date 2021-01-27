@@ -41,11 +41,11 @@ export const ToggleSwitch: React.FC<Props> = ({
 
 	return (
 		<div className="flex justify-center w-full">
-			<div className="flex justify-between items-center m-6 font-semibold text-gray-600">
+			<div className="flex justify-between items-center mx-6 mb-6 font-semibold text-gray-600">
 				<h2>Monthly</h2>
 				{/* switch container */}
 				<div
-					className="w-16 h-8 flex items-center rounded-full select-none p-1 bg-gradient-to-r from-purple-300 to-purple-500 mr-4 ml-4"
+					className="w-16 h-8 flex items-center rounded-full select-none p-1 bg-gradient-to-r from-purple-300 to-purple-500 mr-4 ml-4 cursor-pointer"
 					onClick={() => handleClick()}
 				>
 					{/* switch */}
