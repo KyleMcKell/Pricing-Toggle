@@ -39,7 +39,7 @@ export const Card: React.FC<Props> = ({ card }) => {
 
 	return (
 		<div
-			className={`bg-${colors.bgColor} text-${colors.txtColor} flex flex-col items-center justify-center m-4`}
+			className={`bg-${colors.bgColor} text-${colors.txtColor} flex flex-col items-center justify-around h-full p-8`}
 		>
 			<h4 className="font-semibold">{card.model}</h4>
 			<h3 className="font-bold text-5xl">{`$${card.monthlyPrice}`}</h3>
