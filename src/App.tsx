@@ -1,7 +1,7 @@
 import React from "react";
-import { Cards } from "./Cards";
-import { Title } from "./Title";
-import { ToggleSwitch } from "./ToggleSwitch";
+import { Cards } from "./components/Cards";
+import { Title } from "./components/Title";
+import { ToggleSwitch } from "./components/ToggleSwitch";
 
 interface Props {}
 
