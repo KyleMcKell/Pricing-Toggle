@@ -1,10 +1,10 @@
 import React from "react";
-import { CardColors } from "./Card";
+import { CardStyles } from "./Card";
 interface Props {
 	storage: string;
 	usersAllowed: number;
 	sendGB: number;
-	colors: CardColors;
+	colors: CardStyles;
 }
 
 export const Perks: React.FC<Props> = ({
@@ -14,9 +14,7 @@ export const Perks: React.FC<Props> = ({
 	colors,
 }) => {
 	return (
-		<div
-			className={`flex flex-col justify-center items-center font-semibold text-normal w-full text-${colors.txtColor}`}
-		>
+		<div className="flex flex-col justify-center items-center font-semibold text-normal w-full">
 			<div
 				className={`border-t-2 border-dotted border-${colors.txtColor} w-full m-4`}
 			></div>

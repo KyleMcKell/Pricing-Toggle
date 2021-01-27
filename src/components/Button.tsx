@@ -1,8 +1,8 @@
 import React from "react";
-import { CardColors } from "./Card";
+import { CardStyles } from "./Card";
 
 interface Props {
-	colors: CardColors;
+	colors: CardStyles;
 }
 
 export const Button: React.FC<Props> = ({ colors }) => {

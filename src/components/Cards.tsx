@@ -41,7 +41,7 @@ const pricingCards: PricingCard[] = [
 
 export const Cards = (props: Props) => {
 	return (
-		<div className="flex flex-row h-1/2 w-full justify-center">
+		<div className="flex flex-row h-1/2 w-full justify-center items-center">
 			{pricingCards.map((card) => {
 				return <Card card={card} />;
 			})}

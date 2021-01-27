@@ -7,25 +7,28 @@ interface Props {
 	card: PricingCard;
 }
 
-export type CardColors = {
+export type CardStyles = {
 	bgColor: string;
 	txtColor: string;
 	btnColor: string;
 	btnTxtColor: string;
+	height: string;
 };
 
-const baseCardColors: CardColors = {
+const baseCardColors: CardStyles = {
 	bgColor: "gray-50",
 	txtColor: "gray-600",
 	btnColor: "purple-400",
 	btnTxtColor: "white",
+	height: "11/12",
 };
 
-const primaryCardColors: CardColors = {
+const primaryCardColors: CardStyles = {
 	bgColor: "purple-400",
-	txtColor: "gray-50",
-	btnColor: "gray-50",
+	txtColor: "white",
+	btnColor: "white",
 	btnTxtColor: "gray-600",
+	height: "full",
 };
 
 export const Card: React.FC<Props> = ({ card }) => {
@@ -39,9 +42,9 @@ export const Card: React.FC<Props> = ({ card }) => {
 
 	return (
 		<div
-			className={`bg-${colors.bgColor} text-${colors.txtColor} flex flex-col items-center justify-around m-4 h-full w-1/6 p-8 rounded-lg shadow-2xl`}
+			className={`bg-${colors.bgColor} text-${colors.txtColor} flex flex-col items-center justify-around h-${colors.height} m-1 w-1/6 p-8 rounded-2xl shadow-2xl`}
 		>
-			<h4 className="font-semibold">{card.model}</h4>
+			<h4 className="font-semibold text-lg">{card.model}</h4>
 			<h3 className="font-bold text-7xl flex items-center">
 				<span className="text-4xl mr-1">$</span>
 				{`${card.monthlyPrice}`}
