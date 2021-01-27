@@ -41,7 +41,7 @@ export const ToggleSwitch: React.FC<Props> = ({
 
 	return (
 		<div className="flex justify-center w-full">
-			<div className="flex justify-between items-center mx-6 mb-6 font-semibold text-gray-600">
+			<div className="flex justify-between items-center m-6 font-semibold text-gray-600">
 				<h2>Monthly</h2>
 				{/* switch container */}
 				<div
