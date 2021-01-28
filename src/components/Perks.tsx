@@ -1,5 +1,4 @@
 import React from "react";
-import { CardStyles } from "./Card";
 interface Props {
 	storage: string;
 	usersAllowed: number;

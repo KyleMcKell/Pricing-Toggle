@@ -1,5 +1,4 @@
 import React from "react";
-import { CardStyles } from "./Card";
 interface Props {
 	btnBgColor: string;
 	btnTxtColor: string;

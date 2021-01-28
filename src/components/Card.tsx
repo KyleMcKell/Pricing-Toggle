@@ -8,7 +8,7 @@ interface Props {
 	renewalLength: string;
 }
 
-export type CardStyles = {
+type CardStyles = {
 	bgColor: string;
 	txtColor: string;
 	height: string;
