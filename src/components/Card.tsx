@@ -11,28 +11,34 @@ interface Props {
 export type CardStyles = {
 	bgColor: string;
 	txtColor: string;
-	btnColor: string;
-	btnTxtColor: string;
 	height: string;
 	zIndex: string;
+	btnStyles: {
+		btnBgColor: string;
+		btnTxtColor: string;
+	};
 };
 
 const baseCardStyles: CardStyles = {
 	bgColor: "gray-50",
 	txtColor: "gray-600",
-	btnColor: "purple-400",
-	btnTxtColor: "white",
 	height: "11/12",
 	zIndex: "0",
+	btnStyles: {
+		btnBgColor: "purple-400",
+		btnTxtColor: "white",
+	},
 };
 
 const primaryCardStyles: CardStyles = {
 	bgColor: "purple-400",
 	txtColor: "white",
-	btnColor: "white",
-	btnTxtColor: "gray-600",
 	height: "full",
 	zIndex: "10",
+	btnStyles: {
+		btnBgColor: "white",
+		btnTxtColor: "gray-600",
+	},
 };
 
 export const Card: React.FC<Props> = ({ card, renewalLength }) => {
@@ -70,9 +76,12 @@ export const Card: React.FC<Props> = ({ card, renewalLength }) => {
 				storage={card.storage}
 				usersAllowed={card.usersAllowed}
 				sendGB={card.sendGB}
-				colors={style}
+				borderColor={style.txtColor}
 			/>
-			<Button colors={style} />
+			<Button
+				btnBgColor={style.btnStyles.btnBgColor}
+				btnTxtColor={style.btnStyles.btnTxtColor}
+			/>
 		</div>
 	);
 };
