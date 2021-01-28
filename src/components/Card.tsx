@@ -65,7 +65,7 @@ export const Card: React.FC<Props> = ({ card, renewalLength }) => {
 
 	return (
 		<div
-			className={`sm:w-1/2 mdlg:w-1/3 mdlg:-m-2 md:z-${style.zIndex} lg:w-1/4 xl:w-1/8 max-w-sm min-w-min min-h-full m-2 bg-${style.bgColor} text-${style.txtColor} h-${style.height} flex flex-col items-center justify-around p-8 rounded-2xl shadow-2xl`}
+			className={`sm:w-1/2 mdlg:w-1/3 mdlg:-m-2 mdlg:z-${style.zIndex} lg:w-1/4 xl:w-1/8 max-w-sm min-w-min min-h-full m-2 bg-${style.bgColor} text-${style.txtColor} h-${style.height} flex flex-col items-center justify-around p-8 rounded-2xl shadow-2xl`}
 		>
 			<h4 className="font-semibold text-lg">{card.model}</h4>
 			<h3 className="font-bold text-7xl flex items-center">
