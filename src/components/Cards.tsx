@@ -43,7 +43,7 @@ const pricingCards: PricingCard[] = [
 
 export const Cards = (props: Props) => {
 	return (
-		<div className="md:flex-row flex flex-col h-1/2 w-full justify-center items-center">
+		<div className="mdlg:flex-row flex flex-col h-1/2 w-full justify-center items-center">
 			{pricingCards.map((card) => {
 				return <Card renewalLength={props.renewalLength} card={card} />;
 			})}
