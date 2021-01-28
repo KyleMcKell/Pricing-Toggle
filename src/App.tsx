@@ -9,7 +9,7 @@ const App = (props: Props) => {
 	const [renewalLength, setRenewalLength] = useState("monthly");
 
 	return (
-		<div className="flex justify-center items-center h-screen w-screen flex-col bg-gradient-to-br from-purple-50 to-purple-300">
+		<div className="md:h-screen flex justify-center items-center flex-col bg-gradient-to-br from-purple-50 to-purple-300 w-screen">
 			<Title />
 			<ToggleSwitch
 				setRenewalLength={setRenewalLength}
