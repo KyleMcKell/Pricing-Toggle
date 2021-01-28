@@ -4,7 +4,7 @@ interface Props {}
 
 export const Title = (props: Props) => {
 	return (
-		<div className="flex flex-col justify-center items-center pb-6 border-b-4 border-dotted border-purple-400">
+		<div className="md:mt-0 mt-24 flex flex-col justify-center items-center pb-6 border-b-4 border-dotted border-purple-400">
 			<h1 className="text-3xl text-gray-600 mb-4 font-bold tracking-widest">
 				Our Pricing
 			</h1>
